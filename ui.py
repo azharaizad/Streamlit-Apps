@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import pickle
-from sklearn.preprocessing import StandardScaler
 
 # Load the dataset
 laptops_df = pd.read_csv('laptops.csv')
