@@ -1,14 +1,14 @@
 import streamlit as st
 import pandas as pd
-import joblib
+import pickle
 from sklearn.preprocessing import StandardScaler
 
 # Load the dataset
 laptops_df = pd.read_csv('laptops.csv')
 
 # Load the trained model and label encoders
-model = joblib.load('price_prediction_model.pkl')
-label_encoders = joblib.load('label_encoders.pkl')
+model = pickle.load('price_prediction_model.pkl')
+label_encoders = pickle.load('label_encoders.pkl')
 
 st.sidebar.title("Navigation")
 selected_tab = st.sidebar.radio("Go to", ["Home", "Laptop Suggestion"])
